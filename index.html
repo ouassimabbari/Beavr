@@ -29,10 +29,45 @@
   <!-- Favicon -->
   <!-- <link rel="icon" type="image/png" href="favicon.png"/> -->
 
-  <title>beavr</title>
+  <title>Beavr</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      background-color: #000000;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+    .loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #ffffff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
+  <div class="loading">
+    <div class="loader"></div>
+    <p>Loading Beavr...</p>
+  </div>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
